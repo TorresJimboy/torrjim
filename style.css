@@ -48,7 +48,7 @@ p {
 }
 .section-title {
 	font-size: 4rem;
-	font-weight: 300;
+	font-weight: 500;
 	color: black;
 	margin-bottom: 10px;
 	text-transform: uppercase;
@@ -56,7 +56,8 @@ p {
 	text-align: center;
 }
 .section-title span {
-	color: rgb(23, 197, 255);
+	color: white;
+	font-weight: 500;
 }
 
 .cta {
@@ -80,10 +81,6 @@ p {
 .brand h1 {
 	font-size: 3rem;
 	text-transform: uppercase;
-	color: white;
-}
-.brand h1 span {
-	color: rgb(23, 197, 255);
 }
 
 /* Header section */
@@ -215,7 +212,7 @@ p {
 
 /* Home Section */
 #home {
-	background-image: url(./img/Tech-bg.jpg);
+	background-image: url(./img/portfolio-bg.jpg);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -229,7 +226,7 @@ p {
 	height: 100%;
 	width: 100%;
 	background-color: black;
-	opacity: 0.7;
+	opacity: 0.6;
 	z-index: -1;
 }
 #home .home {
@@ -239,44 +236,49 @@ p {
 	justify-content: flex-start;
 }
 /*  TextReveal Section */
-#home h1 {
-	display: block;
-	width: 0;
-	font-size: 4rem;
-	position: relative;
-	overflow: hidden;
-	white-space: nowrap;
-	color: white;
-	animation: typing steps(30, end) 1.5s forwards;
-}
-
 #home h1:nth-child(1) {
-	animation-delay: 0.5s;
+	font-weight: 100;
+	font-size: 2rem;
+	margin-bottom: 10px;
 }
 
-#home h1:nth-child(2) {
-	animation-delay: 1.5s;
+#home h1:nth-child(2){
+	font-weight: 100;
+	font-size: 6rem;
+	font-weight: 600;
 }
 
 #home h1:nth-child(3) {
-	color: rgb(23, 197, 255);
-	font-weight: 500;
-	animation-delay: 3.2s;
+	font-weight: 100;
+	font-size: 6rem;
+	font-weight: 400;
 }
 
-@keyframes typing {
-	from {
-		width: 0;
-	}
-	to {
-		width: 100%;
-	}
+#home h1 {
+	display: block;
+	width: 0;
+	position: relative;
+	white-space: nowrap;
+	color: white;
 }
+
+.gradient-text {
+	background: linear-gradient(90deg, #00FFFF, #1E90FF, #00BFFF, #87CEFA);
+	-webkit-background-clip: text; 
+	-webkit-text-fill-color: transparent; 
+	background-clip: text; 
+	color: transparent;
+}
+
 /* End TextReveal Section */
 
 /* End Home Section */
 
 /* Skills Section */
+#skills {
+	background: url('./img/wood-bg.jpg');
+	background-size: cover;
+}
 #skills .skills {
     display: flex;
     flex-direction: column;
@@ -322,6 +324,9 @@ p {
 }
 
 @media (max-width: 1200px) {
+	.brand h1 {
+	margin-left: 20px;
+	}
     .skills-grid {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -333,6 +338,9 @@ p {
 }
 
 @media (max-width: 900px) {
+	.brand h1 {
+	margin-left: 20px;
+	}
     .skills-grid {
         grid-template-columns: repeat(3, 1fr); 
     }
@@ -348,6 +356,9 @@ p {
 }
 
 @media (max-width: 600px) {
+	.brand h1 {
+	margin-left: 20px;
+	}
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -359,6 +370,7 @@ p {
 }
 
 @media (max-width: 400px) {
+	
     .skills-grid {
         grid-template-columns: 1fr; 
     }
@@ -450,6 +462,29 @@ p {
 /* End Projects section */
 
 /* About Section */
+.whiteb {
+	color: white;
+}
+
+#about {
+	background: url('./img/mossholder.jpg');
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+}
+
+#about::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.5;
+	z-index: -1;
+}
+
 #about .about {
 	flex-direction: column-reverse;
 	text-align: center;
@@ -475,7 +510,7 @@ p {
 	text-align: justify;
 }
 #about .col-right .cta {
-	color: black;
+	color: white;
 	margin-bottom: 50px;
 	padding: 10px 20px;
 	font-size: 2rem;
@@ -499,6 +534,10 @@ p {
 /* End About Section */
 
 /* contact Section */
+#contact {
+	background: linear-gradient(90deg, #00FFFF, #1E90FF, #00BFFF, #87CEFA);
+}
+
 #contact .contact {
 	flex-direction: column;
 	max-width: 1200px;
