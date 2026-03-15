@@ -464,7 +464,18 @@ p {
 }
 
 @media (max-width: 400px) {
-    
+    .cta-items .cta {
+	font-size: 1.15rem !important;
+	}
+
+	.brand h1 {
+		font-size: 2rem !important;
+	}
+
+	#footer p {
+		font-size: 1rem !important;
+	}
+
     .skills-grid {
         grid-template-columns: 1fr; 
     }
@@ -479,19 +490,6 @@ p {
     }
 }
 
-@media (max-width: 300px) {
-	.cta-items .cta {
-	font-size: 1.15rem !important;
-	}
-
-	.brand h1 {
-		font-size: 2rem !important;
-	}
-
-	#footer p {
-		font-size: 1rem !important;
-	}
-}
 
   
 /* End Skills Section */
