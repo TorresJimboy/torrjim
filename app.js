@@ -28,7 +28,7 @@ menu_item.forEach((item) => {
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-list ul li a");
 
-window.addEventListener("scroll", () => {
+function setActiveLink() {
   let current = "";
 
   sections.forEach(section => {
@@ -46,7 +46,10 @@ window.addEventListener("scroll", () => {
       link.classList.add("active");
     }
   });
-});
+}
+
+window.addEventListener("scroll", setActiveLink);
+window.addEventListener("load", setActiveLink);
 
 // PROJECTS
 

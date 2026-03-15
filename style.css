@@ -25,7 +25,21 @@ img.full-width {
 	object-fit: cover;
 }
 img.facebook{
-	width: 30px;
+	width: 35px;
+	margin-left: 15px;
+	object-fit: contain;
+	animation: pulse 1.5s infinite ease-in-out;
+}
+
+img.github{
+	width: 35px;
+	margin-left: 15px;
+	object-fit: contain;
+	animation: pulse 1.5s infinite ease-in-out;
+}
+
+img.linkedin{
+	width: 38px;
 	margin-left: 15px;
 	object-fit: contain;
 	animation: pulse 1.5s infinite ease-in-out;
@@ -358,6 +372,10 @@ p {
 }
 
 @media (max-width: 1200px) {
+	.project-box {
+		grid-template-columns: repeat(1, 1fr) !important;
+	}
+
 	.brand h1 {
 	margin-left: 20px;
 	}
@@ -389,9 +407,50 @@ p {
     }
 }
 
+@media (max-width: 767px) {
+	.project-card {
+		width: 90% !important;
+	}
+
+	@keyframes pulse {
+		0%, 100% {
+		  transform: scale(1);
+		}
+		50% {
+		  transform: scale(1.15);
+		}
+	}
+
+	.cta-items {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.link-icons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 20px;
+	}
+}
+
 @media (max-width: 600px) {
+	.card-info p {
+		font-size: 0.9rem;
+		line-height: 10px;
+	}
+
+	.card-info .tech {
+		font-size: 0.7rem;
+	}
+	.cta-items .cta {
+	font-size: 1.25rem !important;
+	}
+	
+
 	.brand h1 {
-	margin-left: 20px;
+		margin-left: 20px;
 	}
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -404,7 +463,7 @@ p {
 }
 
 @media (max-width: 400px) {
-	
+    
     .skills-grid {
         grid-template-columns: 1fr; 
     }
@@ -447,7 +506,7 @@ p {
 }
 
 .project-box {
-  margin-top: 60px;
+  margin: 60px auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center; 
