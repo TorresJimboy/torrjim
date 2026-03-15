@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <title>My Portfolio</title>
 </head>
@@ -15,17 +16,15 @@
     <div class="header container">
       <div class="nav-bar">
         <div class="brand">
-          <a href="#home">
-            <h1 class="gradient-text">Guariño Torres</h1>
-          </a>
+          <a href="#about"><h1>Guariño Torres</h1></a>
+          <!-- <button class="theme-icon" id="theme"></button> -->
         </div>
         <div class="nav-list">
           <div class="hamburger">
             <div class="bar"></div>
           </div>
           <ul>
-            <li><a href="#home" data-after="Home">Home</a></li>
-            <li><a href="#about" data-after="About">About</a></li>
+            <li><a href="#about" data-after="Home">About</a></li>
             <li><a href="#skills" data-after="Skill">Skills</a></li>
             <li><a href="#projects" data-after="Projects">Projects</a></li>
             <li><a href="#contact" data-after="Contact">Contact</a></li>
@@ -38,20 +37,40 @@
 
 
   <!-- Home Section  -->
-  <section id="home">
-    <div class="home container">
-      <div>
-        <h1><span class="gradient-text">Hello, I'm</span></h1>
-        <h1><span class="gradient-text">Guariño Torres</span></h1>
-        <h1>but you can call me <br> Jim!</h1>
-        <a href="#about" type="button" class="cta">Know more about me</a> 
+  <section id="about">
+    <div class="about container">
+      <div class="col-left">
+        <div class="about-img">
+          <img src="./img/me3.png" alt="img" class="full-width">
+        </div>
+      </div>
+      <div class="col-right">
+        <!-- <h1 class="section-title whiteb">About <span>me</span><a href="https://www.facebook.com/guarino.torres.7/" target="_blank" type="button"><img src="./img/facebook.png" class="facebook"></a></h1> -->
+        <h2 class="whiteb">Web Developer</h2>
+        <p class="whiteb">Hey there! I’m Guariño Torres, but you can call me Jim. I’m a web developer and BSIT graduate with a love for creating websites that are clean, functional, and enjoyable to use. 
+        I’m also a Scrimba FullStack course graduate, and every project I work on is an opportunity to learn, get creative, and solve problems. 
+        I’m driven, constantly learning, and excited to contribute value through my work.</p>
+        <div class="cta-items">
+          <a href="./resume/Torres_Resume.pdf" target="_blank" class="cta btn-effect" download>My CV</a>
+          <a href="#projects" class="cta btn-effect">View Projects</a>
+          <a href="#about" class="cta btn-effect">Certificates</a>
+        </div>
+        <div class="link-icons">
+          <a href="https://github.com/TorresJimboy" target="_blank" type="button"><img src="./img/github.png" class="github"></a>
+          <a href="https://www.facebook.com/guarino.torres.7/" target="_blank" type="button"><img src="./img/facebook.png" class="facebook"></a>
+          <a href="https://www.linkedin.com/in/guari%C3%B1o-torres-827433358/" target="_blank" type="button"><img src="./img/linkedin.png" class="linkedin"></a>
+        </div>
       </div>
     </div>
   </section>
+        <!-- <h1><span class="gradient-text">Hello, I'm</span></h1>
+        <h1><span class="gradient-text">Guariño Torres</span></h1>
+        <h1>but you can call me <br> Jim!</h1>
+        <a href="#about" type="button" class="cta">Know more about me</a>  -->
   <!-- End Home Section  -->
   
   <!-- About Section -->
-  <section id="about">
+  <!-- <section id="about">
     <div class="about container">
       <div class="col-left">
         <div class="about-img">
@@ -66,14 +85,14 @@
         <a href="./resume/Torres_Resume.pdf" target="_blank" class="cta" download>Download Resume</a>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- End About Section -->
 
   <!-- Skill Section -->
   <section id="skills">
     <div class="skills container">
       <div class="skill-top">
-        <h1 class="section-title">Sk<span>i</span>lls</h1>
+        <h1 class="section-title gradient-text">Skills</h1>
       </div>
       <div class="skills-grid">
         <div class="skill-card">
@@ -105,8 +124,28 @@
           <p>Laravel</p>
         </div>
         <div class="skill-card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/livewire/livewire-original.svg" alt="Livewire" class="full-width">
-          <p>Livewire</p>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="full-width">
+          <p>React</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="full-width">
+          <p>TypeScript</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" class="full-width">
+          <p>Next.js</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" class="full-width">
+          <p>Express.js</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="full-width">
+          <p>Node.js</p>
         </div>
         <div class="skill-card">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="full-width">
@@ -126,16 +165,65 @@
   <!-- End Skill Section -->
 
   <!-- Projects Section -->
-  <section id="projects">
-    <div class="projects container">
+  <section id="projects" class="projects">
       <div class="projects-header">
-        <h1 class="section-title">Recent <span>Projects</span></h1>
+        <h1 class="section-title gradient-text">Recent Projects</h1>
       </div>
-      <div class="all-projects">
-        <div class="project-item">
-          <h1>To be <span>Added!</span></h1>
+      <div class="project-box">
+          <div class="project-card">
+            <a href="#about"><img src="./img/movies.png" alt="Movie Watchlist Screenshot"></a>
+            <div class="card-info">
+              <h2>Movie Watchlist</h2>
+              <p>
+                A movie watchlist app where users can search for films using an API and save their 
+                favorite movies to a personal watchlist.
+              </p>
+              <p class="tech">
+                React • REST API • JavaScript
+              </p>
+            </div>
+          </div>
+          <div class="project-card">
+            <a href="#about"><img src="./img/movies.png" alt="Movie Watchlist Screenshot"></a>
+            <div class="card-info">
+              <h2>Movie Watchlist</h2>
+              <p>
+                A movie watchlist app where users can search for films using an API and save their 
+                favorite movies to a personal watchlist.
+              </p>
+              <p class="tech">
+                React • REST API • JavaScript
+              </p>
+            </div>
+          </div>
+          <div class="project-card">
+            <a href="#about"><img src="./img/movies.png" alt="Movie Watchlist Screenshot"></a>
+            <div class="card-info">
+              <h2>Movie Watchlist</h2>
+              <p>
+                A movie watchlist app where users can search for films using an API and save their 
+                favorite movies to a personal watchlist.
+              </p>
+              <p class="tech">
+                React • REST API • JavaScript
+              </p>
+            </div>
+          </div>
+          <div class="project-card">
+            <a href="#about"><img src="./img/movies.png" alt="Movie Watchlist Screenshot"></a>
+            <div class="card-info">
+              <h2>Movie Watchlist</h2>
+              <p>
+                A movie watchlist app where users can search for films using an API and save their 
+                favorite movies to a personal watchlist.
+              </p>
+              <p class="tech">
+                React • REST API • JavaScript
+              </p>
+            </div>
+          </div>
       </div>
-    </div>
+      </div>
   </section>
   <!-- End Projects Section -->
 
@@ -143,30 +231,32 @@
   <section id="contact">
     <div class="contact container">
       <div>
-        <h1 class="section-title">Contact <span>info</span></h1>
+        <h1 class="section-title gradient-text">Contact info</h1>
       </div>
       <div class="contact-items">
-        <div class="contact-item">
+        <a href="tel:+639199516857" class="contact-item">
           <img src="./img/phone.png" alt="img">
           <div class="contact-info">
             <h1>Phone</h1>
             <h2>+63 919 951 6857</h2>
           </div>
-        </div>
-        <div class="contact-item">
-          <img src="./img/mail.png" alt="img">
+        </a>
+        <a href="mailto:torresguarino17@gmail.com" class="contact-item">
+          <img src="./img/mail.png" alt="Email icon">
           <div class="contact-info">
             <h1>Email</h1>
             <h2>torresguarino17@gmail.com</h2>
           </div>
-        </div>
-        <div class="contact-item">
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=North+Fairview+Quezon+City+Philippines" 
+          target="_blank" 
+          class="contact-item">
           <img src="./img/home1.png" alt="img">
           <div class="contact-info">
             <h1>Address</h1>
-            <h2>Novaliches Proper, Quezon City, Philippines</h2>
+            <h2>North Fairview, Quezon City, Philippines</h2>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>

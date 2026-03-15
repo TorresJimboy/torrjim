@@ -24,7 +24,33 @@ menu_item.forEach((item) => {
 	});
 });
 
+// NAV
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-list ul li a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    const sectionHeight = section.clientHeight;
+
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+
+// PROJECTS
+
 // Footer
 const dateSnapshot = new Date()
 const footerDate = document.getElementById('foot-date')
-footerDate.textContent = (`© ${dateSnapshot.getFullYear()} Guariño Torres. All rights reserved`)
+footerDate.textContent = (`© ${dateSnapshot.getFullYear()} Guariño Torres. All rights reserved.`)
