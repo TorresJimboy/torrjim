@@ -479,7 +479,7 @@ p {
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 300px) {
 	.cta-items .cta {
 	font-size: 1.15rem !important;
 	}
