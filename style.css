@@ -436,6 +436,7 @@ p {
 }
 
 @media (max-width: 600px) {
+	
 	.card-info p {
 		font-size: 0.9rem;
 		line-height: 10px;
@@ -478,6 +479,20 @@ p {
     }
 }
 
+@media (max-width: 360px) {
+	.cta-items .cta {
+	font-size: 1.15rem !important;
+	}
+
+	.brand h1 {
+		font-size: 2rem !important;
+	}
+
+	#footer p {
+		font-size: 1rem !important;
+	}
+}
+
   
 /* End Skills Section */
 
@@ -516,6 +531,7 @@ p {
 .project-card {
   display: flex;
   flex-direction: row;  
+  align-items: center;
   background: grey;
   background-size: cover;
   border-radius: 10px;
