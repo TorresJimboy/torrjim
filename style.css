@@ -481,7 +481,7 @@ p {
 
 @media (max-width: 360px) {
 	.cta-items .cta {
-	font-size: .3rem !important;
+	font-size: 1px !important;
 	}
 
 	.brand h1 {
