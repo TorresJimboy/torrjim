@@ -436,17 +436,6 @@ p {
 }
 
 @media (max-width: 600px) {
-	.cta-items .cta {
-	font-size: 1px !important;
-	}
-
-	.brand h1 {
-		font-size: 2rem !important;
-	}
-
-	#footer p {
-		font-size: 1rem !important;
-	}
 	
 	.card-info p {
 		font-size: 0.9rem;
@@ -474,6 +463,20 @@ p {
     }
 }
 
+@media (max-width: 450px) {
+	.cta-items .cta {
+	font-size: 1px !important;
+	}
+
+	.brand h1 {
+		font-size: 2rem !important;
+	}
+
+	#footer p {
+		font-size: 1rem !important;
+	}
+}
+
 @media (max-width: 400px) {
     
     .skills-grid {
@@ -489,6 +492,7 @@ p {
         font-size: 0.9rem; 
     }
 }
+
 
 
   
