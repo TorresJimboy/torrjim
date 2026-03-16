@@ -51,7 +51,21 @@ function setActiveLink() {
 window.addEventListener("scroll", setActiveLink);
 window.addEventListener("load", setActiveLink);
 
-// PROJECTS
+// Certificates modal
+const openBtn = document.getElementById("openCertificates");
+const modal = document.getElementById("certModal");
+
+openBtn.addEventListener("click", () => {
+  modal.style.display = "flex";
+  document.body.style.overflow = "hidden";
+});
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+});
 
 // Footer
 const dateSnapshot = new Date()

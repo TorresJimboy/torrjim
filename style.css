@@ -556,7 +556,7 @@ p {
   transition: transform 0.2s ease;
 }
 
-.project-card a:hover {
+.heft:hover {
   transform: scale(1.05);
 }
 
@@ -588,12 +588,54 @@ p {
 /* End Projects section */
 
 /* About Section */
+.cert-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+
+.cert-modal-content {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  min-width: 250px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.cert-modal-content h2 {
+  margin-bottom: 15px;
+  color: white;
+}
+
+.cert-modal-content a {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid rgb(23,197,255);
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.cert-modal-content a:hover {
+  background: rgba(23,197,255,0.2);
+}
+
 .btn-effect:hover {
-  transform: scale(1.05);
+  	transform: scale(1.05);
 }
 
 .btn-effect:active {
-  transform: scale(1.02);
+  	transform: scale(1.02);
 }
 
 .whiteb {
