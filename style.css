@@ -408,9 +408,6 @@ p {
 }
 
 @media (max-width: 767px) {
-	.project-card {
-		width: 90% !important;
-	}
 
 	@keyframes pulse {
 		0%, 100% {
@@ -525,9 +522,22 @@ p {
 .project-box {
   margin: 60px auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center; 
-  gap: 30px; 
+  grid-template-columns: 1fr ;
+  gap: 30px;
+  max-height: 600px;   
+  overflow-y: auto;      
+  padding: 20px;
+  padding-right: 10px;
+  max-width: 1000px;
+}
+
+.project-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project-box::-webkit-scrollbar-thumb {
+  background: #0ea5e9;
+  border-radius: 10px;
 }
 
 .project-card {
@@ -540,8 +550,7 @@ p {
   overflow: hidden;
   gap: 20px;
   padding: 20px;
-  width: 100%;       
-  max-width: 800px;
+  width: 100%;
   color: white;
 }
 

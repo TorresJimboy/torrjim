@@ -55,6 +55,22 @@ window.addEventListener("load", setActiveLink);
 const openBtn = document.getElementById("openCertificates");
 const modal = document.getElementById("certModal");
 
+// Projects
+import projects from './data.js'
+const projectBox = document.getElementById("project-box")
+projectBox.innerHTML = projects.map(project => `
+  <div class="project-card">
+    <a href="${project.link}" target="_blank" el="noopener noreferrer" class="heft">
+      <img src="${project.image}" alt="${project.name}">
+    </a>
+    <div class="card-info">
+      <h2>${project.name}</h2>
+      <p>${project.description}</p>
+      <p class="tech">${project.tech}</p>
+    </div>
+  </div>
+`).join('');
+
 openBtn.addEventListener("click", () => {
   modal.style.display = "flex";
   document.body.style.overflow = "hidden";
