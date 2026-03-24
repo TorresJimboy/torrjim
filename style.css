@@ -560,6 +560,13 @@ button:hover {
 }
 
 @media (max-width: 600px) {
+	.cert {
+		width: 350px !important;
+	}
+
+	.carousel {
+		width: 400px !important;
+	}
 
 	.card-info p {
 		font-size: 0.9rem;
