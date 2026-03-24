@@ -379,6 +379,7 @@ p {
 	display: flex;
 	justify-content: space-between;
 	transform: translateY(-50%);
+	pointer-events: none;
 }
 
 button {
@@ -388,6 +389,7 @@ button {
 	padding: 10px;
 	cursor: pointer;
 	border-radius: 5px;
+	pointer-events: auto;
 }
 
 button:hover {

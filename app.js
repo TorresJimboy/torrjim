@@ -4,24 +4,24 @@ const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a'
 const header = document.querySelector('.header.container');
 
 hamburger.addEventListener('click', () => {
-	hamburger.classList.toggle('active');
-	mobile_menu.classList.toggle('active');
+  hamburger.classList.toggle('active');
+  mobile_menu.classList.toggle('active');
 });
 
 document.addEventListener('scroll', () => {
-	var scroll_position = window.scrollY;
-	if (scroll_position > 250) {
-		header.style.backgroundColor = '#29323c';
-	} else {
-		header.style.backgroundColor = 'transparent';
-	}
+  var scroll_position = window.scrollY;
+  if (scroll_position > 250) {
+    header.style.backgroundColor = '#29323c';
+  } else {
+    header.style.backgroundColor = 'transparent';
+  }
 });
 
 menu_item.forEach((item) => {
-	item.addEventListener('click', () => {
-		hamburger.classList.toggle('active');
-		mobile_menu.classList.toggle('active');
-	});
+  item.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobile_menu.classList.toggle('active');
+  });
 });
 
 // Nav
@@ -55,84 +55,75 @@ window.addEventListener("load", setActiveLink);
 const overlay = document.getElementById('overlay');
 const container = document.querySelector('.carousel-container');
 const certBtn = document.getElementById('certBtn');
-
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
-
 const track = document.getElementById('track');
-const slides = document.querySelectorAll('.slide');
+const slides = Array.from(document.querySelectorAll('.slide'));
 const dotsContainer = document.getElementById('dots');
 
 let index = 0;
+let startX = 0;
+let isSwiping = false;
 
+const firstClone = slides[0].cloneNode(true);
+const lastClone = slides[slides.length - 1].cloneNode(true);
+track.appendChild(firstClone);
+track.insertBefore(lastClone, slides[0]);
+const allSlides = Array.from(track.children);
 
-certBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  overlay.classList.add('show');
-});
+track.style.transform = 'translateX(-100%)';
 
-
-overlay.addEventListener('click', () => {
-  overlay.classList.remove('show');
-});
-
-
-container.addEventListener('click', (e) => {
-  e.stopPropagation();
-});
-
+certBtn.addEventListener('click', e => { e.stopPropagation(); overlay.classList.add('show'); document.body.style.overflow = 'hidden'; });
+overlay.addEventListener('click', () => { overlay.classList.remove('show'); document.body.style.overflow = ''; goToSlide(index); });
+container.addEventListener('click', e => e.stopPropagation());
 
 slides.forEach((_, i) => {
   const dot = document.createElement('div');
   dot.classList.add('dot');
   if (i === 0) dot.classList.add('active');
-  
-  dot.addEventListener('click', (e) => {
-    e.stopPropagation();
-    index = i;
-    updateSlide();
-    updateDots();
-  });
-  
+  dot.addEventListener('click', e => { e.stopPropagation(); goToSlide(i); });
   dotsContainer.appendChild(dot);
 });
 
+function updateDots() {
+  document.querySelectorAll('.dot').forEach((dot, i) => dot.classList.toggle('active', i === index));
+}
 
-function updateSlide() {
-  track.style.transform = `translateX(-${index * 100}%)`;
+function goToSlide(i, skipTransition = false) {
+  index = i;
+  track.style.transition = skipTransition ? 'none' : 'transform 0.3s ease';
+  track.style.transform = `translateX(-${(index + 1) * 100}%)`;
   updateDots();
 }
 
-
-function updateDots() {
-  const dots = document.querySelectorAll('.dot');
-  dots.forEach((dot, i) => {
-    dot.classList.toggle('active', i === index);
-  });
+function moveSlide(direction) {
+  if (direction === 1 && index >= slides.length - 1) {
+    index++;
+    goToSlide(index);
+    track.addEventListener('transitionend', () => goToSlide(0, true), { once: true });
+  } else if (direction === -1 && index <= 0) {
+    index--;
+    goToSlide(index);
+    track.addEventListener('transitionend', () => goToSlide(slides.length - 1, true), { once: true });
+  } else {
+    goToSlide(index + direction);
+  }
 }
 
+nextBtn.addEventListener('click', e => { e.stopPropagation(); moveSlide(1); });
+prevBtn.addEventListener('click', e => { e.stopPropagation(); moveSlide(-1); });
 
-function nextSlide() {
-  index = (index + 1) % slides.length;
-  updateSlide();
+function startSwipe(e) { isSwiping = true; startX = e.touches[0].clientX; }
+function endSwipe(e) {
+  if (!isSwiping) return;
+  const delta = e.changedTouches[0].clientX - startX;
+  if (delta > 50) moveSlide(-1);
+  else if (delta < -50) moveSlide(1);
+  isSwiping = false;
 }
 
-function prevSlide() {
-  index = (index - 1 + slides.length) % slides.length;
-  updateSlide();
-}
-
-
-nextBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  nextSlide();
-});
-
-prevBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  prevSlide();
-});
-
+track.addEventListener('touchstart', startSwipe);
+track.addEventListener('touchend', endSwipe);
 
 // Projects
 import projects from './data.js'
