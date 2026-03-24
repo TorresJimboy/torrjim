@@ -505,6 +505,10 @@ button:hover {
 	}
 
 	.skills-grid {
+		margin-top: 20px;
+	}
+
+	.skills-grid {
 		grid-template-columns: repeat(4, 1fr);
 	}
 
@@ -615,7 +619,11 @@ button:hover {
 @media (max-width: 400px) {
 
 	.skills-grid {
-		grid-template-columns: 1fr;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.skill-card {
+		padding: 20px;
 	}
 
 	.skill-card img {
