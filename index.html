@@ -16,7 +16,9 @@
     <div class="header container">
       <div class="nav-bar">
         <div class="brand">
-          <a href="#about"><h1>Guariño Torres</h1></a>
+          <a href="#about">
+            <h1>Guariño Torres</h1>
+          </a>
           <!-- <button class="theme-icon" id="theme"></button> -->
         </div>
         <div class="nav-list">
@@ -33,6 +35,42 @@
       </div>
     </div>
   </section>
+  <div class="overlay" id="overlay">
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-track" id="track">
+          <div class="slide">
+            <div class="certificate-card">
+              <a href="./certificates/FullstackCertificate.pdf" target="_blank">
+                <img class="cert" src="./certificates/fullstack.png">
+              </a>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="certificate-card">
+              <a href="./certificates/Front-EndCertificate.pdf" target="_blank">
+                <img class="cert" src="./certificates/frontend.png">
+              </a>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="certificate-card">
+              <a href="./certificates/PythonCertificate.pdf" target="_blank">
+                <img class="cert" src="./certificates/Python.png">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button id="prevBtn">❮</button>
+          <button id="nextBtn">❯</button>
+        </div>
+
+        <div class="dots" id="dots"></div>
+      </div>
+    </div>
+  </div>
   <!-- End Header -->
 
 
@@ -46,38 +84,35 @@
       </div>
       <div class="col-right">
         <h2 class="whiteb">Web Developer</h2>
-        <p class="whiteb">Hey there! I’m Guariño Torres, but you can call me Jim. I’m a web developer and BSIT graduate with a love for creating websites that are clean, functional, and enjoyable to use. 
-        I’m also a Scrimba FullStack course graduate, and every project I work on is an opportunity to learn, get creative, and solve problems. 
-        I’m driven, constantly learning, and excited to contribute value through my work.</p>
+        <p class="whiteb">Hey there! I’m Guariño Torres, but you can call me Jim. I’m a web developer and BSIT graduate
+          with a love for creating websites that are clean, functional, and enjoyable to use.
+          I’m also a Scrimba FullStack course graduate, and every project I work on is an opportunity to learn, get
+          creative, and solve problems.
+          I’m driven, constantly learning, and excited to contribute value through my work.</p>
         <div class="cta-items">
-          <a href="./resume/Jim_Resume.pdf" target="_blank" class="cta btn-effect" download>My CV</a>
+          <a href="./resume/Jim_Resume.pdf" target="_blank" class="cta btn-effect">My CV</a>
           <a href="#projects" class="cta btn-effect">View Projects</a>
           <div class="certificates">
-            <button class="cta btn-effect" id="openCertificates">Certificates</button>
-          </div>
-          <div class="cert-modal" id="certModal">
-            <div class="cert-modal-content">
-              <h2>Certificates</h2>
-              <a href="./certificates/PythonCertificate.pdf" target="_blank">Python Certificate</a>
-              <a href="./certificates/Front-EndCertificate.pdf" target="_blank">Frontend Certificate</a>
-              <a href="./certificates/FullstackCertificate.pdf" target="_blank">Fullstack Certificate</a>
-            </div>
+            <button class="cta btn-effect" id="certBtn">Certificates</button>
           </div>
         </div>
         <div class="link-icons">
-          <a href="https://github.com/TorresJimboy" target="_blank" type="button"><img src="./img/github.png" class="github"></a>
-          <a href="https://www.facebook.com/guarino.torres.7/" target="_blank" type="button"><img src="./img/facebook.png" class="facebook"></a>
-          <a href="https://www.linkedin.com/in/guari%C3%B1o-torres-827433358/" target="_blank" type="button"><img src="./img/linkedin.png" class="linkedin"></a>
+          <a href="https://github.com/TorresJimboy" target="_blank" type="button"><img src="./img/github.png"
+              class="github"></a>
+          <a href="https://www.facebook.com/guarino.torres.7/" target="_blank" type="button"><img
+              src="./img/facebook.png" class="facebook"></a>
+          <a href="https://www.linkedin.com/in/guari%C3%B1o-torres-827433358/" target="_blank" type="button"><img
+              src="./img/linkedin.png" class="linkedin"></a>
         </div>
       </div>
     </div>
   </section>
-        <!-- <h1><span class="gradient-text">Hello, I'm</span></h1>
+  <!-- <h1><span class="gradient-text">Hello, I'm</span></h1>
         <h1><span class="gradient-text">Guariño Torres</span></h1>
         <h1>but you can call me <br> Jim!</h1>
         <a href="#about" type="button" class="cta">Know more about me</a>  -->
   <!-- End Home Section  -->
-  
+
   <!-- About Section -->
   <!-- <section id="about">
     <div class="about container">
@@ -105,67 +140,82 @@
       </div>
       <div class="skills-grid">
         <div class="skill-card heft">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="full-width">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"
+            class="full-width">
           <p>HTML</p>
         </div>
         <div class="skill-card heft">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" class="full-width">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"
+            class="full-width">
           <p>CSS</p>
         </div>
         <div class="skill-card heft">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="full-width">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            alt="JavaScript" class="full-width">
           <p>JavaScript</p>
         </div>
         <div class="skill-card heft">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap" class="full-width">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap"
+            class="full-width">
           <p>Bootstrap</p>
         </div>
         <div class="skill-card heft">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue" class="full-width">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue"
+            class="full-width">
           <p>Vue</p>
         </div>
         <div class="skill-card heft">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="full-width">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
+            class="full-width">
           <p>Python</p>
         </div>
         <div class="skill-card heft">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel" class="full-width">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel"
+            class="full-width">
           <p>Laravel</p>
         </div>
         <div class="skill-card heft">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="full-width">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
+            class="full-width">
           <p>React</p>
         </div>
 
         <div class="skill-card heft">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="full-width">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+            alt="TypeScript" class="full-width">
           <p>TypeScript</p>
         </div>
 
         <div class="skill-card heft">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" class="full-width">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js"
+            class="full-width">
           <p>Next.js</p>
         </div>
 
         <div class="skill-card heft">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" class="full-width">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js"
+            class="full-width">
           <p>Express.js</p>
         </div>
 
         <div class="skill-card heft">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="full-width">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
+            class="full-width">
           <p>Node.js</p>
         </div>
         <div class="skill-card heft">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="full-width">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
+            class="full-width">
           <p>MySQL</p>
         </div>
         <div class="skill-card heft">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="full-width">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"
+            class="full-width">
           <p>GIT</p>
         </div>
         <div class="skill-card heft">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="full-width">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+            class="full-width">
           <p>GitHub</p>
         </div>
       </div>
@@ -175,12 +225,12 @@
 
   <!-- Projects Section -->
   <section id="projects" class="projects">
-      <div class="projects-header">
-        <h1 class="section-title gradient-text">Recent Projects</h1>
-      </div>
-      <div class="project-box" id="project-box">
-          <!-- Projects Section -->
-      </div>
+    <div class="projects-header">
+      <h1 class="section-title gradient-text">Recent Projects</h1>
+    </div>
+    <div class="project-box" id="project-box">
+      <!-- Projects Section -->
+    </div>
   </section>
   <!-- End Projects Section -->
 
@@ -205,8 +255,7 @@
             <h2>torresguarino17@gmail.com</h2>
           </div>
         </a>
-        <a href="https://www.google.com/maps/search/?api=1&query=North+Fairview+Quezon+City+Philippines" 
-          target="_blank" 
+        <a href="https://www.google.com/maps/search/?api=1&query=North+Fairview+Quezon+City+Philippines" target="_blank"
           class="contact-item">
           <img src="./img/home1.png" alt="img">
           <div class="contact-info">

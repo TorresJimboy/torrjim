@@ -24,7 +24,7 @@ menu_item.forEach((item) => {
 	});
 });
 
-// NAV
+// Nav
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-list ul li a");
 
@@ -51,9 +51,88 @@ function setActiveLink() {
 window.addEventListener("scroll", setActiveLink);
 window.addEventListener("load", setActiveLink);
 
-// Certificates modal
-const openBtn = document.getElementById("openCertificates");
-const modal = document.getElementById("certModal");
+// Certificates
+const overlay = document.getElementById('overlay');
+const container = document.querySelector('.carousel-container');
+const certBtn = document.getElementById('certBtn');
+
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+const track = document.getElementById('track');
+const slides = document.querySelectorAll('.slide');
+const dotsContainer = document.getElementById('dots');
+
+let index = 0;
+
+
+certBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  overlay.classList.add('show');
+});
+
+
+overlay.addEventListener('click', () => {
+  overlay.classList.remove('show');
+});
+
+
+container.addEventListener('click', (e) => {
+  e.stopPropagation();
+});
+
+
+slides.forEach((_, i) => {
+  const dot = document.createElement('div');
+  dot.classList.add('dot');
+  if (i === 0) dot.classList.add('active');
+  
+  dot.addEventListener('click', (e) => {
+    e.stopPropagation();
+    index = i;
+    updateSlide();
+    updateDots();
+  });
+  
+  dotsContainer.appendChild(dot);
+});
+
+
+function updateSlide() {
+  track.style.transform = `translateX(-${index * 100}%)`;
+  updateDots();
+}
+
+
+function updateDots() {
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
+}
+
+
+function nextSlide() {
+  index = (index + 1) % slides.length;
+  updateSlide();
+}
+
+function prevSlide() {
+  index = (index - 1 + slides.length) % slides.length;
+  updateSlide();
+}
+
+
+nextBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  nextSlide();
+});
+
+prevBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  prevSlide();
+});
+
 
 // Projects
 import projects from './data.js'
@@ -70,18 +149,6 @@ projectBox.innerHTML = projects.map(project => `
     </div>
   </div>
 `).join('');
-
-openBtn.addEventListener("click", () => {
-  modal.style.display = "flex";
-  document.body.style.overflow = "hidden";
-});
-
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.style.display = "none";
-    document.body.style.overflow = "auto";
-  }
-});
 
 // Footer
 const dateSnapshot = new Date()
