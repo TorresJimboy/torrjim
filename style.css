@@ -621,6 +621,10 @@ button:hover {
 		max-width: 50px;
 		height: 50px;
 	}
+
+	.project-box {
+		margin-top: 0 !important;
+	}
 }
 
 @media (max-width: 450px) {
@@ -896,6 +900,27 @@ button:hover {
 	z-index: -1;
 }
 
+@keyframes slide {
+	from {
+		transform: translateY(40px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.slide-up {
+	opacity: 0;
+	transform: translateY(40px);
+}
+
+.slide-up.show {
+	opacity: 1;
+	animation: slide 0.8s ease forwards;
+}
 
 /* End About Section */
 

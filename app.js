@@ -147,4 +147,15 @@ const footerDate = document.getElementById('foot-date')
 footerDate.textContent = (`© ${dateSnapshot.getFullYear()} Guariño Torres. All rights reserved.`)
 
 // Animation
-
+document.querySelectorAll('.slide-up').forEach(el => {
+  const observer = new IntersectionObserver(
+    ([entry], obs) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        obs.unobserve(entry.target);
+      }
+    },
+    { threshold: 0.1 }
+  );
+  observer.observe(el);
+});
