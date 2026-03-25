@@ -1,3 +1,8 @@
+body {
+	background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
+	background-size: cover;
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -433,7 +438,7 @@ button:hover {
 }
 
 #skills {
-	background: url('./img/wood-bg.jpg');
+	/* background: url('./img/wood-bg.jpg'); */
 	background-size: cover;
 	position: relative;
 	z-index: 1;
@@ -566,6 +571,22 @@ button:hover {
 }
 
 @media (max-width: 600px) {
+	@keyframes pulse {
+
+		0%,
+		100% {
+			transform: scale(1);
+		}
+
+		50% {
+			transform: scale(1.1);
+		}
+	}
+
+	.pulse {
+		animation: pulse 2.5s infinite;
+	}
+
 	.cert {
 		width: 350px !important;
 	}
@@ -651,7 +672,7 @@ button:hover {
 }
 
 #projects {
-	background: url('./img/grey-wall-bg.jpg');
+	/* background: url('./img/grey-wall-bg.jpg'); */
 	background-size: cover;
 	margin: 0 auto;
 	min-height: 100vh;
@@ -777,7 +798,7 @@ button:hover {
 }
 
 #about {
-	background: url('./img/mossholder.jpg');
+	/* background: url('./img/mossholder.jpg'); */
 	background-size: cover;
 	position: relative;
 	z-index: 1;
@@ -852,10 +873,6 @@ button:hover {
 /* End About Section */
 
 /* contact Section */
-#contact {
-	background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
-	background-size: cover;
-}
 
 #contact .contact {
 	flex-direction: column;

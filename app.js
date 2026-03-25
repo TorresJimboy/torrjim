@@ -130,7 +130,7 @@ import projects from './data.js'
 const projectBox = document.getElementById("project-box")
 projectBox.innerHTML = projects.map(project => `
   <div class="project-card">
-    <a href="${project.link}" target="_blank" el="noopener noreferrer" class="heft">
+    <a href="${project.link}" target="_blank" el="noopener noreferrer" class="heft pulse">
       <img src="${project.image}" alt="${project.name}">
     </a>
     <div class="card-info">
