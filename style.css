@@ -445,15 +445,15 @@ button:hover {
 }
 
 #skills::after {
-	content: ' ';
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-color: black;
-	opacity: 0.5;
+	content: '';
 	position: absolute;
+	inset: 0;
+	pointer-events: none;
 	z-index: -1;
+	background:
+		radial-gradient(circle at 20% 30%, #fff 0 60px, transparent 61px),
+		radial-gradient(circle at 80% 70%, #fff 0 40px, transparent 41px);
+	opacity: 0.05;
 }
 
 #skills .skills {
@@ -680,6 +680,19 @@ button:hover {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
+}
+
+#projects::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	z-index: -1;
+	background:
+		radial-gradient(circle at 20% 30%, #fff 0 60px, transparent 61px),
+		radial-gradient(circle at 80% 70%, #fff 0 40px, transparent 41px);
+	opacity: 0.05;
 }
 
 #projects .projects-header h1 {
@@ -807,6 +820,19 @@ button:hover {
 #about::after {
 	content: '';
 	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background:
+		radial-gradient(circle at center, rgba(0, 255, 255, 0.08), transparent 70%),
+		linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+	background-size: auto, 40px 40px, 40px 40px;
+	z-index: -1;
+}
+
+/* #about::after {
+	content: '';
+	position: absolute;
 	left: 0;
 	top: 0;
 	height: 100%;
@@ -814,7 +840,7 @@ button:hover {
 	background-color: black;
 	opacity: 0.5;
 	z-index: -1;
-}
+} */
 
 #about .about {
 	flex-direction: column-reverse;
@@ -870,9 +896,25 @@ button:hover {
 	z-index: -1;
 }
 
+
 /* End About Section */
 
 /* contact Section */
+#contact {
+	position: relative;
+}
+
+#contact::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	z-index: -1;
+	background:
+		radial-gradient(circle at 20% 30%, #fff 0 60px, transparent 61px),
+		radial-gradient(circle at 80% 70%, #fff 0 40px, transparent 41px);
+	opacity: 0.05;
+}
 
 #contact .contact {
 	flex-direction: column;

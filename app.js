@@ -145,3 +145,6 @@ projectBox.innerHTML = projects.map(project => `
 const dateSnapshot = new Date()
 const footerDate = document.getElementById('foot-date')
 footerDate.textContent = (`© ${dateSnapshot.getFullYear()} Guariño Torres. All rights reserved.`)
+
+// Animation
+
