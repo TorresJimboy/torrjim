@@ -26,5 +26,12 @@ export default [
         name: 'Memory Game',
         description: "A responsive Memory Game that challenges players to match card pairs, enhancing focus and memory skills with a clean, interactive interface.",
         tech: 'JavaScript • TypeScript • React'
+    },
+    {
+        image: './img/socialbook.png',
+        link: 'https://torresjimboy.github.io/socialbook/',
+        name: 'Socialbook',
+        description: "An interactive Facebook-style social media clone designed to demonstrate skills in JavaScript, React, CSS, and AI integration, featuring a responsive user interface, dynamic components, and modern web development practices.",
+        tech: 'JavaScript • TypeScript • React'
     }
 ]
