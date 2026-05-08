@@ -18,7 +18,7 @@ export default [
         link: 'https://torresjimboy.github.io/ordering-app/',
         name: 'Ordering App',
         description: "An interactive ordering app featuring medieval equipments, allowing users to explore and shop for historically inspired items.",
-        tech: 'HTML • TypeScript • React'
+        tech: 'React + Vite • TypeScript • Firebase • Firestore • Tailwind CSS'
     },
     {
         image: './img/weatherapp.png',
