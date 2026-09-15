@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect x="10" y="2" width="28" height="44" rx="6" fill="#512bd4"/>
+  <rect x="13" y="7" width="22" height="31" rx="2" fill="#ede7fb"/>
+  <path d="M21 4.5h6M22 42h4" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+  <text x="24" y="26" fill="#512bd4" font-family="Arial,sans-serif" font-size="9" font-weight="700" text-anchor="middle">.NET</text>
+</svg>

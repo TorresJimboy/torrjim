@@ -25,19 +25,9 @@ export const skills = [
     "name": "Bootstrap"
   },
   {
-    "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
-    "alt": "Vue",
-    "name": "Vue"
-  },
-  {
     "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     "alt": "Python",
     "name": "Python"
-  },
-  {
-    "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
-    "alt": "Laravel",
-    "name": "Laravel"
   },
   {
     "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
@@ -48,16 +38,6 @@ export const skills = [
     "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
     "alt": "TypeScript",
     "name": "TypeScript"
-  },
-  {
-    "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-    "alt": "Next.js",
-    "name": "Next.js"
-  },
-  {
-    "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-    "alt": "Express.js",
-    "name": "Express.js"
   },
   {
     "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
@@ -80,10 +60,75 @@ export const skills = [
     "name": "GitHub"
   },
   {
-    "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
-    "alt": "Spring Boot",
-    "name": "Spring Boot"
-  }
+    "image": "./img/skills/csharp.svg",
+    "alt": "C#",
+    "name": "C#"
+  },
+  {
+    "image": "./img/skills/aspnet-core.svg",
+    "alt": "ASP.NET Core",
+    "name": "ASP.NET Core"
+  },
+  {
+    "image": "./img/skills/razor-pages.svg",
+    "alt": "Razor Pages",
+    "name": "Razor Pages"
+  },
+  {
+    "image": "./img/skills/dotnet-maui.svg",
+    "alt": ".NET MAUI",
+    "name": ".NET MAUI"
+  },
+  {
+    "image": "./img/skills/xaml.svg",
+    "alt": "XAML",
+    "name": "XAML"
+  },
+  {
+    "image": "./img/skills/rest-api.svg",
+    "alt": "REST APIs",
+    "name": "REST APIs"
+  },
+  {
+    "image": "./img/skills/dapper.svg",
+    "alt": "Dapper",
+    "name": "Dapper"
+  },
+  {
+    "image": "./img/skills/swagger.svg",
+    "alt": "Swagger / OpenAPI",
+    "name": "Swagger / OpenAPI"
+  },
+  {
+    "image": "./img/skills/aws-lightsail.svg",
+    "alt": "AWS Lightsail",
+    "name": "AWS Lightsail"
+  },
+  {
+    "image": "./img/skills/phpmyadmin.svg",
+    "alt": "phpMyAdmin",
+    "name": "phpMyAdmin"
+  },
+  {
+    "image": "./img/skills/google-play-console.svg",
+    "alt": "Google Play Console",
+    "name": "Google Play Console"
+  },
+  {
+    "image": "./img/skills/app-store-connect.svg",
+    "alt": "App Store Connect",
+    "name": "App Store Connect"
+  },
+  {
+    "image": "./img/skills/vscode.svg",
+    "alt": "Visual Studio Code",
+    "name": "VS Code"
+  },
+  {
+    "image": "./img/skills/rider.svg",
+    "alt": "JetBrains Rider",
+    "name": "JetBrains Rider"
+  },
 ];
 
 export const certificates = [
