@@ -30,7 +30,7 @@ export default [
         image: './img/socialbook.png',
         link: 'https://torresjimboy.github.io/socialbook/',
         name: 'Socialbook',
-        description: "An interactive Facebook-style social media clone designed to demonstrate skills in JavaScript, React, CSS, and Database integration.",
+        description: "An interactive Facebook-style social media clone designed to demonstrate skills in JavaScript, React and CSS.",
         tech: 'Bootstrap • TypeScript • React • Auth • Supabase'
     },
     {
