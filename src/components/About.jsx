@@ -8,6 +8,7 @@ export default function About({ onOpenCertificates }) {
         </div>
       </div>
       <div className="col-right">
+        <span className="section-eyebrow">Hi, I'm Jim</span>
         <h2 className="whiteb slide-up">Software Developer</h2>
         <p className="whiteb">Hi, I’m Guariño Torres (Jim), a BSIT graduate and Software Developer
           passionate about creating clean, secure, and user-friendly applications. I’ve

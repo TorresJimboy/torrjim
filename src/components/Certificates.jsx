@@ -8,11 +8,13 @@ export default function Certificates({ onClose }) {
   const move = (direction) => setIndex((current) => (current + direction + certificates.length) % certificates.length);
 
   useEffect(() => {
+    const dialog = dialogRef.current;
     const previousFocus = document.activeElement;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
-    dialogRef.current.showModal();
+    dialog.showModal();
     return () => {
+      dialog.close();
       document.body.style.overflow = previousOverflow;
       previousFocus?.focus();
     };
@@ -26,7 +28,7 @@ export default function Certificates({ onClose }) {
       }
     }}>
       <div className="carousel-container">
-        <button className="close-certificates" aria-label="Close certificates" onClick={onClose} autoFocus>×</button>
+        <button className="close-certificates" aria-label="Close certificates" onClick={onClose}>×</button>
         <div className="carousel" onTouchStart={(event) => { startX.current = event.touches[0].clientX; }} onTouchCancel={() => { startX.current = null; }} onTouchEnd={(event) => {
           if (startX.current === null) return;
           const delta = event.changedTouches[0].clientX - startX.current;

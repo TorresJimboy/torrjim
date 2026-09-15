@@ -1,5 +1,25 @@
 export default [
     {
+        image: './img/mobrail-web-ss.png',
+        link: 'https://app.mobrail.jmg.xyz/Login',
+        name: 'Mobrail Web',
+        platform: 'Web application',
+        previewFit: 'contain',
+        description: 'A web dashboard for creating trips, managing agents, and exploring their locations on a map.',
+        tech: 'C# • ASP.NET Core • Razor Pages • JavaScript • MySQL • MapLibre'
+    },
+    {
+        name: 'Mobrail Mobile',
+        platform: 'Mobile application',
+        screenshots: [
+            { image: './img/mobrailm-1.jpg', label: 'Sign in' },
+            { image: './img/mobrailm-3.jpg', label: 'Duty record' },
+            { image: './img/mobrailm-4.jpg', label: 'Trips' }
+        ],
+        description: 'A mobile companion for agents to sign in with a one-time password, select a vehicle, record their duty, and accept trips with a history for travel times, and distances.',
+        tech: '.NET MAUI • C# • XAML • REST API'
+    },
+    {
         image: './img/orderingapp.png',
         link: 'https://torresjimboy.github.io/ordering-app/',
         name: 'Ordering App',
